@@ -1,11 +1,9 @@
-# $fillable Has No Context: Why Mass Assignment Breaks Down at Scale
-
 Mass assignment in Laravel is one of those things that feels like magic at first.
 You see it in every tutorial: just toss your validated data into `Model::create($data)` or `$model->update($request->validated())`, set up your `$fillable`, and you're off to the races. For quick projects? It works. But when your app starts to get bigger, what once felt convenient can start to cause real trouble.
 
 ## The Usual Approach
 
-Let's be real—most controllers start out pretty much like this:
+Let's be real-most controllers start out pretty much like this:
 
 ```php
 // OrderController.php
@@ -171,7 +169,7 @@ DTOs and Actions add some boilerplate. But they make the code honest: each endpo
 - When things grow and your models pile up the fields, you lose track of what's really getting written.
 - The issue isn't just field count; it's that `$fillable` has zero context. Anyone can set anything on accident.
 - Use a DTO per context to map request fields explicitly, and an Action to write to the model with explicit field names.
-- The best test: when you look at a controller, do you know—without checking three files—exactly what's hitting the database? With mass assignment, probably not. With explicit mapping, you always do.
+- The best test: when you look at a controller, do you know-without checking three files-exactly what's hitting the database? With mass assignment, probably not. With explicit mapping, you always do.
 
 ## Author's Note
 

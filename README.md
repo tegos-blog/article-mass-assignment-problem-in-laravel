@@ -10,4 +10,4 @@
 - The DTO + Action pattern that makes field mapping explicit and honest
 - Real-world example with `OrderCreateDTO` and separate actions per context (customer, admin, frontend)
 
-Read the full post: [$fillable Has No Context: Why Mass Assignment Breaks Down at Scale](https://dev.to/tegos/PLACEHOLDER)
+Read the full post: [$fillable Has No Context: Why Mass Assignment Breaks Down at Scale](https://dev.to/tegos/fillable-has-no-context-why-mass-assignment-breaks-down-at-scale-3lmj)
